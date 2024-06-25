@@ -1,4 +1,6 @@
 using AutoFixture;
+using AutoFixture.AutoMoq;
+using AutoFixture.Xunit2;
 using FluentAssertions;
 using Moq;
 using TODOList.BL;
@@ -56,6 +58,14 @@ namespace TODOList.Test
             act.Should().Throw<ArgumentException>().WithMessage("Title cannot be null or empty. (Parameter 'title')");
         }
 
+        //[Theory, AutoData]
+        //public void TestTEST(int first, int second, int sum)
+        //{
+        //    var fixture = new Fixture().Customize(new AutoMoqCustomization());
 
+        //    var validEntity = fixture.Create<Task>();
+
+        //    var repositoryMock = fixture.Freeze<Mock<ITaskRepository>>();
+        //}
     }
 }
